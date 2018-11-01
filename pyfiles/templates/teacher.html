@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Teacher</title>
+        <link rel="stylesheet" href="navbar.css">
+        <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Open+Sans" rel="stylesheet">
+                <style>
+                        body{
+                        margin:0;
+                        padding:0;
+                        background-color:grey;
+                        }
+                        header{
+                        width: 100%;
+                        height:70px;
+                        background-color: #282828;
+                        }
+                        h1{
+                        position: absolute;
+                        padding: 3px;
+                        float:left;
+                        margin-left: 2%;
+                        margin-top: 10px;
+                        font-family: 'Comic Sans MS',cursive;
+                        color:#F0c330;
+                        }
+                        span{
+                        color:#ffffff;
+                        }
+                        #nav{
+                        width:auto;
+                        float: right;
+                        margin-top:8px;
+                        }
+                        #nav1{
+                        display: inline-block;
+                        padding:15px 30px;
+                        }
+                        a{
+                        text-align: center;
+                        color:#ffffff;
+                        text-decoration:none;
+                        font-family:'Open Sans',sans-serif;
+                        font-size:1.2vw;
+                        }
+                        a:hover{
+                        color:#F0c330;
+                        transition:0.5s;
+                        }
+                        #data{
+                        text-align:left;
+                        font-family:'Open Sans',sans-serif;;
+                        color:blue;
+                        list-style-type:none;
+                        margin:5px;
+                        
+                        
+                        }
+                        #data1{
+                        diplay:none;
+                        text-align:left;
+                        font-family:'Open Sans',sans-serif;;
+                        color:white;
+                        font-size:1.2vw;
+                        padding:10px;
+                        }
+                </style>        
+    </head>
+    <header>
+        <h1>THE<span>KIOSK</span></h1>
+        <nav>
+            <ul id="nav">
+                <li id="nav1"><a href="#">Room Allotment</a></li>
+                <li id="nav1"><a href="#">Upload Marks</a></li>
+                <li id="nav1"><a href="#">Upload Attendence</a></li>
+                                
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <figure>
+                <img src="IMG_20181001_162222.jpg" style="width:150px;height:150px;">
+      </figure>
+      <ul id="data">
+                        <li id="data1">Name</li>
+                        <li id="data1">{{usn}}</li>
+                        <li id="data1"><a href="#">Manage Account</a></li>
+                        <li id="data1"><a href="#">Class TimeTable</a></li>
+                        <li id="data1"><a href="#">Academic Calender</a></li>
+          </ul>
+       
+    </body>
+</html>

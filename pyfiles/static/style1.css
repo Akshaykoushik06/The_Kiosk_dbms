@@ -1,0 +1,94 @@
+body
+{
+    margin:0;
+    padding:0;
+    background:url(http://www.vactualpapers.com/wallpapers/material-design-hd-wallpaper-no-0233/download/1920x1920.png);
+    background-size:cover;
+    background-position:center;
+    font-family:sans-serif;
+}
+
+.login
+{
+    width:420px;
+    height:520px;
+    background:#000000;
+    color:#ffffff;
+    top:50%;
+    left:50%;
+    opacity:0.7;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    padding:70px 30px;
+}
+
+.dp
+{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    position:absolute;
+    top:-90px;
+    left:calc(50% - 90px);
+}
+
+h1
+{
+    margin:0;
+    padding:0 0 20px;
+    text-align:center;
+    font-size:34px;
+}
+
+.login p
+{
+    margin:0;
+    padding:0;
+    font-weight:bold;
+    font-size:22px;
+}
+
+.login input
+{
+    width:100%;
+    margin-bottom: 18px;
+}
+
+.login input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background:transparent;
+    outline: none;
+    height: 40px;
+    color: #ffffff;
+    font-size:18px;
+}
+
+.login input[type="submit"]
+{
+    border:none;
+    outline:none;
+    height:40px;
+    background:#000000;
+    color:#fff;
+    font-size:18px;
+    border-radius:20px;
+}
+
+.login input[type="submit"]:hover
+{
+    cursor:pointer;
+    background:#ffc107;
+    color:#000;
+}
+
+.login a
+{
+    text:decoration:none;
+    top:-300px;
+    font-size:16px;
+    line-height:20px;
+    color:#ffc107;
+}

@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Sign Up</title>
+        <style>
+            body
+            {
+                margin:0;
+                padding:0;
+                background:url(http://www.vactualpapers.com/wallpapers/material-design-hd-wallpaper-no-0233/download/1920x1920.png);
+                background-size:cover;
+                background-position:center;
+                font-family:sans-serif;
+            }
+
+            .login
+            {
+                width:550px;
+                height:960px;
+                background:#000000;
+                color:#ffffff;
+                top:50%;
+                left:50%;
+                opacity:0.7;
+                position:absolute;
+                transform:translate(-50%,-50%);
+                box-sizing:border-box;
+                padding:20px 30px;
+            }
+
+            h1
+            {
+                margin:0;
+                padding:0 0 10px;
+                text-align:center;
+                font-size:34px;
+            }
+
+            .login p
+            {
+                margin:0;
+                padding:7px;
+                font-weight:bold;
+                font-size:22px;
+            }
+
+            .login input
+            {
+                width:100%;
+                margin-top: 0px;
+                margin-bottom: 30px;
+            }
+
+            .login input[type="text"], input[type="password"]
+            {
+                border: none;
+                border-bottom: 1px solid #ffffff;
+                background:transparent;
+                outline: none;
+                padding:0px;
+                height: 25px;
+                color: #ffffff;
+                font-size:20px;
+            }
+
+            .login input[type="tel"], input[type="email"]
+            {
+                border: none;
+                border-bottom: 1px solid #ffffff;
+                background:transparent;
+                outline: none;
+                padding:0px;
+                height: 25px;
+                color: #ffffff;
+                font-size:20px;
+            }
+
+            .login input[type="submit"]
+            {
+                border:none;
+                outline:none;
+                height:40px;
+                background:#000000;
+                color:#fff;
+                font-size:18px;
+                border-radius:20px;
+            }
+
+            .login input[type="submit"]:hover
+            {
+                cursor:pointer;
+                background:#ffc107;
+                color:#000;
+            }
+
+            .login a
+            {
+                text:decoration:none;
+                top:-300px;
+                font-size:16px;
+                line-height:20px;
+                color:#ffc107;
+            }
+	
+	        .select
+	        {
+		        padding:300px,500px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login">
+            <h1>Sign Up</h1>
+            <form method="post" action="{{ url_for('signup') }}">
+                {{ form.csrf_token }}
+                <p>Name</p>
+                <!--<input type="text">-->
+                {{ form.name }}
+                <p>USN</p>
+                <!--<input type="text" placeholder="">-->
+                {{ form.usn }}
+                <ul>
+                    {% for i in form.usn.errors %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ul>
+                <p>Date of Birth</p>
+                <!--<input type="date" placeholder="">-->
+                {{ form.dob }}
+                <p>Year</p>
+                {% for i in form.usn.errors %}
+                    {{ i }}<br>
+                {% endfor %}
+                {% for (x,y) in form.yr %}
+                    {{ x,y }}<br>
+                {% endfor %}
+                <!--<select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>--><br><br>
+                <p>Branch</p>
+                <!--{{ form.br }}
+                <select>
+                    <option>Computer Science</option>
+                    <option>Electronics and Communication</option>
+                    <option>Mechanical</option>
+                </select>--><br><br>
+                <p>Email</p>
+                <!--<input type="email" placeholder="">-->
+                {{ form.mail }}
+                <ul>
+                    {% for i in form.mail.errors %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ul>
+                <p>Phone No</p>
+                <!--<input type="tel" placeholder="">-->
+                {{ form.ph }}
+                <ul>
+                    {% for i in form.ph.errors %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ul>
+                <p>Password</p>
+                <!--<input type="password" placeholder="">-->
+                {{ form.password }}
+                <ul>
+                    {% for i in form.password.errors %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ul>
+                <p>Re-Enter Password</p>
+                <!--<input type="password" placeholder="">-->
+                {{ form.rpassword }}
+                <ul>
+                    {% for i in form.rpassword.errors %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ul>
+                <input type="submit" value="Sign Up"><br>
+                <p>Already have an account? <a href="{{ url_for('login') }}">Sign IN</a></p>
+            </form>
+        </div>
+    </body>
+</html>
