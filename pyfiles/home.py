@@ -46,6 +46,8 @@ def login():
 def student():
     return render_template('student.html')
 
+#initial commit
+
 @app.route('/teacher')
 def teacher():
     return render_template('teacher.html')
