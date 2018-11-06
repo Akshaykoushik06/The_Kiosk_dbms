@@ -1,18 +1,18 @@
 from flask import Flask,render_template,url_for,redirect
 from flask_wtf import FlaskForm,Form
-from wtforms import StringField,PasswordField,SelectField,SubmitField
-from wtforms.fields.html5 import DateField
+from wtforms import StringField,PasswordField,SubmitField
+#from wtforms.fields.html5 import DateField
 from wtforms.validators import InputRequired,Length,Email
-from flask_sqlalchemy import SQLAlchemy
-from app import app
+#from flask_sqlalchemy import SQLAlchemy
+#from app import app
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Uchiha Itachi'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/akshay/dbms_project/flasky/pyfiles/database.db'
-db = SQLAlchemy(app)
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/akshay/dbms_project/flasky/pyfiles/database.db'
+#db = SQLAlchemy(app)
 
-class User(db.Model):
-    usn = db.Column(db.String, primary_key=True)
+#class User(db.Model):
+#    usn = db.Column(db.String, primary_key=True)
 
 class LoginForm(FlaskForm):
     usn = StringField('username',validators=[InputRequired('USN is required'),Length(min=10,max=10,message='Enter a proper USN fool!!')])
