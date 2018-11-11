@@ -101,7 +101,7 @@
                 line-height:20px;
                 color:#ffc107;
             }
-	
+
 	        .select
 	        {
 		        padding:300px,500px;
@@ -111,74 +111,78 @@
     <body>
         <div class="login">
             <h1>Sign Up</h1>
-            <form method="post" action="{{ url_for('signup') }}">
+            <form method="post" action="{{ url_for('t_signup') }}" name="signupform">
                 {{ form.csrf_token }}
                 <p>Name</p>
-                <!--<input type="text">-->
                 {{ form.name }}
-                <p>USN</p>
-                <!--<input type="text" placeholder="">-->
-                {{ form.usn }}
+
+
+                <p>Teacher ID</p>
+                {{ form.t_id }}
                 <ul>
-                    {% for i in form.usn.errors %}
+                    {% for i in form.t_id.errors %}
                     <li>{{ i }}</li>
                     {% endfor %}
                 </ul>
+
+
                 <p>Date of Birth</p>
-                <!--<input type="date" placeholder="">-->
                 {{ form.dob }}
-                <p>Year</p>
-                {% for i in form.usn.errors %}
-                    {{ i }}<br>
-                {% endfor %}
-                {% for (x,y) in form.yr %}
-                    {{ x,y }}<br>
-                {% endfor %}
-                <!--<select>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                </select>--><br><br>
-                <p>Branch</p>
-                <!--{{ form.br }}
-                <select>
-                    <option>Computer Science</option>
-                    <option>Electronics and Communication</option>
-                    <option>Mechanical</option>
-                </select>--><br><br>
+                <ul>
+                    {% for i in form.dob.errors %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ul>
+
+
+                <p>Date of Joining</p>
+                {{ form.doj }}
+                <ul>
+                    {% for i in form.doj.errors %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ul><br>
+
+
                 <p>Email</p>
-                <!--<input type="email" placeholder="">-->
                 {{ form.mail }}
                 <ul>
                     {% for i in form.mail.errors %}
                     <li>{{ i }}</li>
                     {% endfor %}
                 </ul>
+
+
                 <p>Phone No</p>
-                <!--<input type="tel" placeholder="">-->
                 {{ form.ph }}
                 <ul>
                     {% for i in form.ph.errors %}
                     <li>{{ i }}</li>
                     {% endfor %}
                 </ul>
+
+
                 <p>Password</p>
-                <!--<input type="password" placeholder="">-->
                 {{ form.password }}
                 <ul>
                     {% for i in form.password.errors %}
                     <li>{{ i }}</li>
                     {% endfor %}
                 </ul>
+
+
                 <p>Re-Enter Password</p>
-                <!--<input type="password" placeholder="">-->
                 {{ form.rpassword }}
                 <ul>
                     {% for i in form.rpassword.errors %}
                     <li>{{ i }}</li>
                     {% endfor %}
                 </ul>
+                {% if err %}
+                    {{ err }}
+                {% endif %}
+
+
                 <input type="submit" value="Sign Up"><br>
                 <p>Already have an account? <a href="{{ url_for('login') }}">Sign IN</a></p>
             </form>
