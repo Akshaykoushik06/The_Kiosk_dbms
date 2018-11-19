@@ -19,7 +19,7 @@
         <div class="login">
             <img src="https://www.weact.org/wp-content/uploads/2016/10/Blank-profile.png" class="dp">
             <h1 id="h">Welcome</h1>
-            <form method="post" action="{{ url_for('login') }}">   <!-- login is name of function -->
+            <form method="post" action="/process">   <!-- login is name of function -->
                 {{ form.csrf_token }}
                 <p>USN</p>
                 {{ form.usn }}
