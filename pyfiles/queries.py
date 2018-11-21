@@ -3,7 +3,7 @@ from werkzeug.security import generate_password_hash,check_password_hash
 
 
 def connectdb():
-    conn = sqlite3.connect('test.db', check_same_thread=False)
+    conn = sqlite3.connect('main_db.db', check_same_thread=False)
     c = conn.cursor()
     return conn,c
 
