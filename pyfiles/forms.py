@@ -6,8 +6,8 @@ from wtforms.validators import InputRequired,Length,Email,EqualTo,any_of,Regexp
 
 class LoginForm(FlaskForm):
     usn = StringField('username',
-                       validators=[InputRequired('USN is required'),
-                       Length(min=10,max=10,message='Enter a proper USN')])
+                       validators=[InputRequired('User ID is required'),
+                       Length(min=5,max=10,message='Enter a proper User ID')])
 
     password = PasswordField('password',
                               validators=[InputRequired('Please enter a password'),
@@ -65,7 +65,7 @@ class TeacherSignupForm(FlaskForm):
 
     t_id = StringField('id',
                        validators=[InputRequired(),
-                       Length(min=10,max=10,message='Enter a correct ID')])
+                       Length(min=5,max=5,message='Enter a correct ID')])
 
     doj = StringField('doj',
                       render_kw={"placeholder": "YYYY-MM-DD"},

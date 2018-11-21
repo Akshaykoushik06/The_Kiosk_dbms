@@ -81,15 +81,15 @@
                 <li id="nav1"><a href="#">Result</a></li>
 				<li id="nav1"><a href="#">Gradecard</a></li>
 				<li id="nav1"><a href="#">Manage Account</a></li>
-				<li id="nav1"><a href="#">Logout</a></li>
+				<li id="nav1"><a href="{{ url_for('login') }}">Logout</a></li>
             </ul>
         </nav>
     </header>
     <body>
 
       <ul id="data">
-			<li id="data1">{{ name }}</li>
-			<li id="data1">{{ usn }}</li>
+			<li id="data1">{{ info[0] }}</li>
+			<li id="data1">{{ info[1] }}</li>
 
 	  </ul>
     </body>
